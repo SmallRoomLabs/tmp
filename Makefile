@@ -103,7 +103,7 @@ check: pdp8emu coremakebin coremakerim
 		@printf "7777\n" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "C" 		| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao '1' CORE-D0AB.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -114,7 +114,7 @@ check: pdp8emu coremakebin coremakerim
 		@printf "3751/" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0262\n" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao '2' CORE-D0BB.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -123,7 +123,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0CC 2>CORE-D0CC.2.tmp | tee CORE-D0CC.1.tmp &
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 180
+		@sleep 240
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'RANDOM' CORE-D0CC.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -132,7 +132,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0DB 2>CORE-D0DB.2.tmp | tee CORE-D0DB.1.tmp &
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'A' CORE-D0DB.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -141,7 +141,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0EB 2>CORE-D0EB.2.tmp | tee CORE-D0EB.1.tmp &
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'T' CORE-D0EB.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -150,7 +150,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0FC 2>CORE-D0FC.2.tmp | tee CORE-D0FC.1.tmp&
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'FC' CORE-D0FC.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -161,7 +161,7 @@ check: pdp8emu coremakebin coremakerim
 		@printf "0013/" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0307\n" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'G' CORE-D0GC.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -170,7 +170,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0HC 2>CORE-D0HC.2.tmp | tee CORE-D0HC.1.tmp&
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'HC' CORE-D0HC.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -181,7 +181,7 @@ check: pdp8emu coremakebin coremakerim
 		@printf "3567/" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0311\n" 	| nc -w 1 -u 127.0.0.1 2288
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'I' CORE-D0IB.1.tmp | wc -l)" -lt "1" ]; then false; fi
@@ -190,7 +190,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0JB 2>CORE-D0JB.2.tmp | tee CORE-D0JB.1.tmp &
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 20
+		@sleep 10
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'JB' CORE-D0JB.1.tmp | wc -l)" -lt "1" ]; then false; fi
