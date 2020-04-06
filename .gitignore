@@ -1,0 +1,17 @@
+# OS specific files
+.DS_Store
+
+# Editor- and temporary files
+*.tmp
+*~
+
+# C building artifacts
+*.dSYM
+a.out
+*.o
+pdp8e
+coredump
+coremakebin
+coremakerim
+CORE
+
