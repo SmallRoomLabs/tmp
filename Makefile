@@ -123,7 +123,7 @@ check: pdp8emu coremakebin coremakerim
 	./pdp8emu CORE-D0CC 2>CORE-D0CC.2.tmp | tee CORE-D0CC.1.tmp &
 		@sleep 1
 		@printf "0200G" 	| nc -w 1 -u 127.0.0.1 2288
-		@sleep 40
+		@sleep 180
 		@printf "\03\03\03\03\03" | nc -w 1 -u 127.0.0.1 2288
 		@printf "Q" 		| nc -w 1 -u 127.0.0.1 2288
 		if [ "$$(grep -ao 'RANDOM' CORE-D0CC.1.tmp | wc -l)" -lt "1" ]; then false; fi
